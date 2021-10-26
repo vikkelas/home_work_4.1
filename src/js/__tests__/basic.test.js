@@ -1,7 +1,13 @@
-import sum from '../basic';
+import healhColor from '../basic'
 
-test('should sum', () => {
-  const result = sum([1, 2, 3]);
-
-  expect(result).toBe(6);
-});
+test.each([
+	[{ name: 'Маг', health: 76 }, 'healthy'],
+	[{ name: 'Маг', health: 45 }, 'wounded'],
+	[{ name: 'Маг', health: 3 }, 'critical'],
+])(
+	'should return a string corresponding to the health level',
+	(hero, codeword) => {
+		const result = healhColor(hero)
+		expect(result).toBe(codeword)
+	}
+)

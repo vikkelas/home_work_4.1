@@ -1,7 +1,11 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
-  }
-  return result;
+export default function healhColor(hero) {
+	if (hero.health > 50) {
+		return 'healthy'
+	}
+	if (hero.health < 50 && hero.health > 15) {
+		return 'wounded'
+	}
+	if (hero.health < 15) {
+		return 'critical'
+	}
 }
