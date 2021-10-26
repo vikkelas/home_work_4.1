@@ -1,4 +1,4 @@
-import healhColor from '../basic'
+import healhColor from '../app'
 
 test.each([
 	[{ name: 'Маг', health: 76 }, 'healthy'],
